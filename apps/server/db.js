@@ -21,8 +21,7 @@ module.exports = {
       id: 2,
       name: 'Different energy saving light bulb',
       power: '30W',
-      description:
-        'This is another great bulb for when you need it not to be dark',
+      description: 'This is another great bulb for when you need it not to be dark',
       price: 1399,
       quantity: 4,
       brand: 'Philips',

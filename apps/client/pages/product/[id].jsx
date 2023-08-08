@@ -4,35 +4,23 @@ import basket from '../../public/basket.svg';
 
 export default function Product({ product }) {
   return (
-    <div className='layout'>
+    <div className="layout">
       <header>
-        <Image
-          width="150px"
-          height="50px"
-          priority
-          src={logo}
-          alt="Octopus energy"
-        />
+        <Image width="150px" height="50px" priority src={logo} alt="Octopus energy" />
 
-        <Image
-          width="25px"
-          height="25px"
-          priority
-          src={basket}
-          alt="Shopping cart"
-        />
+        <Image width="25px" height="25px" priority src={basket} alt="Shopping cart" />
       </header>
       <main>
-        <div className='product-img-container'>
+        <div className="product-img-container">
           <Image
             width={500}
             height={500}
             src={product.img_url}
             alt={product.name}
-            className='product-img'
+            className="product-img"
           />
         </div>
-        
+
         <h1>{product.name}</h1>
       </main>
     </div>
