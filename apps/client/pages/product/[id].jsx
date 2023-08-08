@@ -17,7 +17,7 @@ import basket from '../../public/basket.svg';
 export default function Product({ product }) {
   return (
     <div>
-      <header className='layout-padding'>
+      <header className="layout-padding">
         <Image width="150px" height="50px" priority src={logo} alt="Octopus energy" />
 
         <Image width="25px" height="25px" priority src={basket} alt="Shopping cart" />
@@ -33,7 +33,7 @@ export default function Product({ product }) {
           />
         </div>
 
-        <h1 className='layout-padding'>{product.name}</h1>
+        <h1 className="layout-padding">{product.name}</h1>
         <Description />
       </main>
     </div>
