@@ -1,4 +1,13 @@
 import Image from 'next/image';
+
+// Queries
+import getProductQuery from '../../api/queries/getProduct';
+import getAllProductsQuery from '../../api/queries/getAllProducts';
+
+// Utils
+import { gqlFetch } from '../../api/utils';
+
+// Assets
 import logo from '../../public/octopus-logo.svg';
 import basket from '../../public/basket.svg';
 
@@ -28,21 +37,7 @@ export default function Product({ product }) {
 }
 
 export const getStaticPaths = async () => {
-  const res = await fetch('http://127.0.0.1:3001/graphql', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    body: JSON.stringify({
-      query: `{
-        allProducts {
-          id
-        }
-      }`,
-    }),
-  }).then((r) => r.json());
-
+  const res = await gqlFetch('http://127.0.0.1:3001/graphql', getAllProductsQuery);
   const products = res.data.allProducts;
 
   // Get the paths we want to prerender based on products
@@ -56,22 +51,6 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const res = await fetch('http://127.0.0.1:3001/graphql', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    body: JSON.stringify({
-      query: `{
-        Product(id: ${params.id}) {
-          id
-          name
-          img_url
-        }
-      }`,
-    }),
-  }).then((r) => r.json());
-
+  const res = await gqlFetch('http://127.0.0.1:3001/graphql', getProductQuery(params.id));
   return { props: { product: res.data.Product } };
 };
