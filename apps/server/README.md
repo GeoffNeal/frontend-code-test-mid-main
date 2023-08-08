@@ -1,0 +1,3 @@
+# server
+
+Dummy GraphQL server
