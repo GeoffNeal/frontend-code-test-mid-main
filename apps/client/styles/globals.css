@@ -8,6 +8,10 @@
   --sohoLights: #f050f8;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -27,4 +31,28 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0 auto;
+}
+
+.layout {
+  padding: 0 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.product-img-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.product-img {
+  border-radius: 15px;
 }

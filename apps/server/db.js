@@ -17,5 +17,22 @@ module.exports = {
       colour: 'Cool daylight',
       img_url: 'https://i.ibb.co/2nzwxnQ/bulb.png',
     },
+    {
+      id: 2,
+      name: 'Different energy saving light bulb',
+      power: '30W',
+      description:
+        'This is another great bulb for when you need it not to be dark',
+      price: 1399,
+      quantity: 4,
+      brand: 'Philips',
+      weight: 77,
+      height: 12.6,
+      width: 6.2,
+      length: 6.2,
+      model_code: 'E28 ES',
+      colour: 'Cool daylight',
+      img_url: 'https://i.ibb.co/2nzwxnQ/bulb.png',
+    },
   ],
 };
