@@ -1,3 +1,8 @@
 export default function Product() {
-  return <div>Product page</div>;
+  const hello = 'jhgsv';
+  return (
+    <main>
+      <h1>Product</h1>
+    </main>
+  );
 }
