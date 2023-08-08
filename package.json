@@ -3,9 +3,13 @@
   "packageManager": "yarn@3.5.0",
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev"
+    "dev": "turbo run dev",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "commitlint": "^17.6.7",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "turbo": "^1.10.12"
   },
   "workspaces": [
