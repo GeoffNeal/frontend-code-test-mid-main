@@ -1,6 +1,6 @@
 module.exports = {
   // Lint then format TypeScript and JavaScript files
-  '**/*.(ts|tsx|js)': function (filenames) {
+  '**/*.(ts|tsx|js|jsx)': function (filenames) {
     return ['eslint --fix ' + filenames.join(' '), 'prettier --write ' + filenames.join(' ')];
   },
   // Format MarkDown and JSON
