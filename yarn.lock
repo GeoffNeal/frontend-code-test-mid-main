@@ -2680,7 +2680,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cors@npm:^2.8.4":
+"cors@npm:^2.8.4, cors@npm:^2.8.5":
   version: 2.8.5
   resolution: "cors@npm:2.8.5"
   dependencies:
@@ -3644,7 +3644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express@npm:^4.17.1":
+"express@npm:^4.17.1, express@npm:^4.18.2":
   version: 4.18.2
   resolution: "express@npm:4.18.2"
   dependencies:
@@ -3855,9 +3855,11 @@ __metadata:
   dependencies:
     "@commitlint/config-conventional": ^17.6.7
     commitlint: ^17.6.7
+    cors: ^2.8.5
     eslint: ^8.46.0
     eslint-config-next: ^12.2.2
     eslint-config-prettier: ^9.0.0
+    express: ^4.18.2
     husky: ^8.0.3
     lint-staged: ^13.2.3
     prettier: ^3.0.1

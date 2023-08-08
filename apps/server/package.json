@@ -2,7 +2,7 @@
   "name": "server",
   "packageManager": "yarn@3.5.0",
   "scripts": {
-    "dev": "yarn run json-graphql-server ./db.js --p 3001"
+    "dev": "node ./server.js"
   },
   "dependencies": {
     "json-graphql-server": "^2.3.1"
