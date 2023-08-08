@@ -1,5 +1,8 @@
 import Image from 'next/image';
 
+// Components
+import Description from '../../components/Description';
+
 // Queries
 import getProductQuery from '../../api/queries/getProduct';
 import getAllProductsQuery from '../../api/queries/getAllProducts';
@@ -13,14 +16,14 @@ import basket from '../../public/basket.svg';
 
 export default function Product({ product }) {
   return (
-    <div className="layout">
-      <header>
+    <div>
+      <header className='layout-padding'>
         <Image width="150px" height="50px" priority src={logo} alt="Octopus energy" />
 
         <Image width="25px" height="25px" priority src={basket} alt="Shopping cart" />
       </header>
       <main>
-        <div className="product-img-container">
+        <div className="product-img-container layout-padding">
           <Image
             width={500}
             height={500}
@@ -30,7 +33,8 @@ export default function Product({ product }) {
           />
         </div>
 
-        <h1>{product.name}</h1>
+        <h1 className='layout-padding'>{product.name}</h1>
+        <Description />
       </main>
     </div>
   );

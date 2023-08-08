@@ -33,7 +33,7 @@ body {
   margin: 0 auto;
 }
 
-.layout {
+.layout-padding {
   padding: 0 1rem;
 }
 
@@ -55,4 +55,9 @@ header {
 
 .product-img {
   border-radius: 15px;
+}
+
+.description {
+  background-color: var(--hemocyanin);
+  padding: 0.5rem 0;
 }
