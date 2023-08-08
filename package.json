@@ -1,0 +1,7 @@
+{
+  "name": "frontend-code-test-mid-main",
+  "packageManager": "yarn@3.5.0",
+  "devDependencies": {
+    "turbo": "^1.10.12"
+  }
+}
