@@ -1,7 +1,19 @@
 {
   "name": "frontend-code-test-mid-main",
   "packageManager": "yarn@3.5.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev"
+  },
   "devDependencies": {
     "turbo": "^1.10.12"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": "18.17.0",
+    "yarn": "3.5.0"
   }
 }
