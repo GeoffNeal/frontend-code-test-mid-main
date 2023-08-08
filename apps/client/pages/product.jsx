@@ -1,5 +1,5 @@
 export default function Product() {
-  const hello = 'jhgsv';
+  const hello = 'jhgsv'
   return (
     <main>
       <h1>Product</h1>

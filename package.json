@@ -7,9 +7,13 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^17.6.7",
     "commitlint": "^17.6.7",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
+    "prettier": "^3.0.1",
     "turbo": "^1.10.12"
   },
   "workspaces": [
