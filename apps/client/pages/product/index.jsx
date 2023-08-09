@@ -11,7 +11,7 @@ const Product = ({ product }) => {
   const { id, img_url } = product;
   return (
     <Link href={`/product/${id}`}>
-      <div className="product-img-container layout-padding-x flex flex-center mb flex flex-col">
+      <div className="product-img-container layout-padding-x mb flex flex-center flex-col">
         <Image width={500} height={500} src={img_url} alt={id} className="rounded-mid" />
         <div className="layout-padding-x layout-padding-y colour-brand-2">
           <h3>{`Product ${id}`}</h3>
