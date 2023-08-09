@@ -19,7 +19,9 @@ const Counter = ({ max, min, onIncrement, onDecrement }) => {
       <button onClick={decrement} className={btnClasses} disabled={value === min}>
         -
       </button>
-      <span className="text-center inline-block min-width-s count" title='Current quantity'>{value}</span>
+      <span className="text-center inline-block min-width-s count" title="Current quantity">
+        {value}
+      </span>
       <button onClick={increment} className={btnClasses} disabled={value === max}>
         +
       </button>

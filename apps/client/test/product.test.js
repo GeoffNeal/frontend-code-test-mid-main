@@ -17,7 +17,7 @@ const productStub = {
     colour: 'Cool daylight',
   },
   img_url: 'https://i.ibb.co/2nzwxnQ/bulb.png',
-}
+};
 
 test('should be able to increase and decrease product quantity', async () => {
   const { getByText, getByTitle } = render(<Product product={productStub} />);
