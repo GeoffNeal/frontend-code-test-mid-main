@@ -1,10 +1,10 @@
-const Description = () => {
-  const description = 'Test';
+const Description = ({ content }) => {
+//   const description = 'Test';
   return (
     <div className="description">
-      <div className="layout-padding">
+      <div className="bg-brand-1 layout-padding-x layout-padding-y">
         <h2>Description</h2>
-        <p>{description}</p>
+        <p>{content}</p>
       </div>
     </div>
   );
