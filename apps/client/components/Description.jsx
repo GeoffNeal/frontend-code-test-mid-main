@@ -1,5 +1,5 @@
 const Description = ({ content }) => {
-//   const description = 'Test';
+  //   const description = 'Test';
   return (
     <div className="description">
       <div className="bg-brand-1 layout-padding-x layout-padding-y">
