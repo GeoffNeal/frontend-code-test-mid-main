@@ -30,6 +30,7 @@ export default function Product({ product }) {
   const handleChange = (val) => {
     setAdjustedPrice(val * formattedPrice);
     setItemCount(val);
+    setShowCount(false);
   };
 
   const handleAddToCart = () => {
