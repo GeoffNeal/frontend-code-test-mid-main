@@ -40,9 +40,11 @@ export default function Product({ product }) {
     <div>
       <header className="layout-padding-x flex flex-spread">
         <Image width="150px" height="50px" priority src={logo} alt="Octopus energy" />
-        <a href="#" className='flex flex-spread no-text-decoration'>
+        <a href="#" className="flex flex-spread no-text-decoration">
           <Image width="25px" height="25px" priority src={basket} alt="Basket items" />
-          <span className='ml-s text-colour-muted' title='Basket items'>{showCount && itemCount}</span>
+          <span className="ml-s text-colour-muted" title="Basket items">
+            {showCount && itemCount}
+          </span>
         </a>
       </header>
       <main>
@@ -57,7 +59,12 @@ export default function Product({ product }) {
         </div>
 
         <Heading title={product.name} power={product.power} quantity={product.quantity} />
-        <AddToCart price={adjustedPrice.toFixed(2)} onIncrement={handleChange} onDecrement={handleChange} onAddToCart={handleAddToCart} />
+        <AddToCart
+          price={adjustedPrice.toFixed(2)}
+          onIncrement={handleChange}
+          onDecrement={handleChange}
+          onAddToCart={handleAddToCart}
+        />
         <Description content={product.description} />
         <Specifications specifications={product.specifications} />
 
