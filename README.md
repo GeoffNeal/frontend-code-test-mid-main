@@ -6,27 +6,53 @@ In this code test, you'll be asked to:
 
 - Make a simple React app that follows the design in `design.jpg`, consumes the API and makes the front end tests pass. Ideally the app should be responsive.
 
-We've included:
+## My changes
 
-- A sample [Next.js](https://nextjs.org/) project for your convenience, but you're welcome to swap it out for another framework if you prefer
-- Some CSS colour variables that match the colours in the design
-- The assets that you will need to complete the design
+In an effort to stand out I made some changes to the way this app works...
 
-You're also welcome to write more tests for other parts of the application - but design those however you like.
+They are obviously overkill and were not asked for but I wanted to give it a try.
+
+- Made the repo act as a monorepo using [turbo](https://turbo.build/).
+- Set up some commit linting and some code linting
+- Set up some git hooks using husky
+
+## Improvements
+
+Unfortunately, as I spent so much time on the setup, I think the actual front end did suffer a little.
+
+Here are some things that I would improve upon if I had more time:
+
+- Accessibility sort of took a back seat.
+- Completely missed type checking
+- Some design patterns I'm not keen on, or missed opportunities to use NextJS features
+- The result is mobile only. It will expand to desktop, but will just look like a mobile site on a wide screen.
+- I only used vanilla CSS, as I thought at this point I didn't want to run into configuration issues and just wanted to build something.
+- Though Redux would definitely have been overkill for this, would've been nice to showcase (and there's plenty of overkill already).
+- The setup actually had some issues, which resulted in me having to commit twice because some files didn't actually get committed due to the time taken for prettier to run (I think that's what the issue was anyway).
+
+## Notes
+
+You may see that one of the PRs has hundreds of files, that was due to me messing about with yarn's Zero-Installs. The files are cache files, and I decided that was too many files and removed them and reverted back to using node_modules. I'm not sure it's for me in it's current form, but we'll see what the future holds.
 
 ## Getting started
 
 First you'll need to install your dependencies. We've used yarn, if you have another preference feel free to remove the lock file and use what you are comfortable with:
 
 ```sh
-cd client && yarn
+git clone git@github.com:GeoffNeal/frontend-code-test-mid-main.git
+cd frontend-code-test-mid-main
+yarn install
 ```
 
 ## Start the app
 
+Because this is now a monorepo you should just be able to run:
+
 ```sh
 yarn dev
 ```
+
+without navigating to `client`.
 
 This will do two things:
 
@@ -35,36 +61,8 @@ This will do two things:
 
 ## Running tests
 
-You can run tests from the client directory.
+You can run tests from the root or client directory.
 
 ```sh
-cd client && yarn test
+yarn test
 ```
-
-This should give you two failures:
-
-```sh
-FAIL test/product.test.js
-    ✕ should be able to increase and decrease product quantity
-    ✕ should be able to add items to the basket
-```
-
-The task is to build the app that passes these tests.
-
-## What we're looking for
-
-We would like you to demonstrate your ability to:
-
-- Reason through a programming problem
-- Implement a visual design
-- Implement some user interactions
-- Write code that is easy to understand and extend
-- Write tests that document and safeguard the program's behaviour
-- Use a version control system (e.g. git) to effectively convey intent
-
-Notes:
-
-- This has not been set up with Typescript, but if that is something you would like to add, you can follow the [Next.js docs on how to set this up](https://nextjs.org/docs/basic-features/typescript#existing-projects), and add typings to components if you would like.
-- This has not been set up with any type of CSS-in-JS, but if that is something you would like to add, please feel free.
-
-Best of luck!
