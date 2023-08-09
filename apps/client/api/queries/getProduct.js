@@ -7,6 +7,12 @@ const getProductQuery = (productId) => `{
         price
         quantity
         brand
+        weight
+        height
+        width
+        length
+        model_code
+        colour
         img_url
     }
 }`;
