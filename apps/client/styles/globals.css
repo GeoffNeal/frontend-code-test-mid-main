@@ -66,6 +66,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.ml-s {
+  margin-left: 0.3rem;
+}
+
 .ml {
   margin-left: 1rem;
 }
@@ -128,6 +132,10 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.no-text-decoration {
+  text-decoration: none;
 }
 
 .btn {

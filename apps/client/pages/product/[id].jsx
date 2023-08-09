@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from 'next/image';
 
 // Components
@@ -17,12 +18,32 @@ import { formatSpecs, gqlFetch } from '../../api/utils';
 import logo from '../../public/octopus-logo.svg';
 import basket from '../../public/basket.svg';
 
+const splitAt = (index, iterate) => [iterate.slice(0, index), iterate.slice(index)];
+
 export default function Product({ product }) {
+  const formattedPrice = parseFloat(splitAt(-2, `${product.price}`).join('.'));
+
+  const [adjustedPrice, setAdjustedPrice] = useState(formattedPrice);
+  const [itemCount, setItemCount] = useState(formattedPrice);
+  const [showCount, setShowCount] = useState(false);
+
+  const handleChange = (val) => {
+    setAdjustedPrice(val * formattedPrice);
+    setItemCount(val);
+  };
+
+  const handleAddToCart = () => {
+    setShowCount(true);
+  };
+
   return (
     <div>
       <header className="layout-padding-x flex flex-spread">
         <Image width="150px" height="50px" priority src={logo} alt="Octopus energy" />
-        <Image width="25px" height="25px" priority src={basket} alt="Shopping cart" />
+        <a href="#" className='flex flex-spread no-text-decoration'>
+          <Image width="25px" height="25px" priority src={basket} alt="Basket items" />
+          <span className='ml-s text-colour-muted' title='Basket items'>{showCount && itemCount}</span>
+        </a>
       </header>
       <main>
         <div className="product-img-container layout-padding-x flex flex-center">
@@ -36,7 +57,7 @@ export default function Product({ product }) {
         </div>
 
         <Heading title={product.name} power={product.power} quantity={product.quantity} />
-        <AddToCart price={product.price} />
+        <AddToCart price={adjustedPrice.toFixed(2)} onIncrement={handleChange} onDecrement={handleChange} onAddToCart={handleAddToCart} />
         <Description content={product.description} />
         <Specifications specifications={product.specifications} />
 
