@@ -8,12 +8,17 @@
   --sohoLights: #f050f8;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: Gotham, helvetica, arial, sans-serif;
   color: var(--ice);
+  line-height: 1.5
 }
 
 body {
@@ -27,4 +32,148 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0 auto;
+}
+
+.layout-padding-x {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.layout-padding-y {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex-spread {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.ml-s {
+  margin-left: 0.3rem;
+}
+
+.ml {
+  margin-left: 1rem;
+}
+
+.mr {
+  margin-right: 1rem;
+}
+
+.p-full {
+  padding: 1rem;
+}
+
+.line-height-small {
+  line-height: 0.5;
+}
+
+.rounded-slight {
+  border-radius: 5px;
+}
+
+.rounded-mid {
+  border-radius: 10px;
+}
+
+.min-width-s {
+  min-width: 40px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.bg-brand-1 {
+  background-color: var(--hemocyanin);
+}
+
+.bg-brand-2 {
+  background-color: var(--sohoLights);
+}
+
+.bg-brand-3 {
+  background-color: var(--plum);
+}
+
+.text-colour-muted {
+  color: var(--purpleHaze);
+}
+
+.text-colour-dark {
+  color: var(--siphon);
+}
+
+.text-size-small {
+  font-size: 14px;
+}
+
+.text-size-large {
+  font-size: 18px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.no-text-decoration {
+  text-decoration: none;
+}
+
+.btn {
+  border: none;
+}
+
+.btn:disabled {
+  background-color: var(--plum);
+  color: var(--ice);
+}
+
+header {
+  padding: 0.5rem 0;
+}
+
+.product-img-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.spec-list {
+  padding: 0;
+  list-style: none;
+}
+
+.spec-list li {
+  margin: 0 2rem 1rem 0;
+}
+
+.count {
+  position: relative;
+}
+
+.count::before {
+  content: 'Qty';
+  position: absolute;
+  top: -35px;
+  left: 5px;
 }
