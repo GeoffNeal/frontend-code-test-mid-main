@@ -39,6 +39,7 @@ export default function Product({ product }) {
         <AddToCart price={product.price} />
         <Description content={product.description} />
         <Specifications specifications={product.specifications} />
+        
         <footer className="bg-brand-1 text-colour-muted layout-padding-x layout-padding-y text-size-small">
           <span>Octopus Energy Ltd is a company registered in England and Wales.</span>
           <span>Registered number: 09263424. Registered office: 33 Holborn, London, EC1N 2HT.</span>

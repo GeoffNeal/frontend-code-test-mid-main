@@ -10,7 +10,6 @@ export const gqlFetch = async (endpoint, query) => {
 };
 
 export const formatSpecs = (data) => {
-  console.log('DATA: ', data);
   if (!data?.data?.Product) {
     throw new Error('Expected data to contain a `Product` key');
   }

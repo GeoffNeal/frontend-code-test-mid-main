@@ -1,9 +1,11 @@
-// Components
 import { useState } from 'react';
+
+// Components
 import Counter from './Counter';
 
+const splitAt = (index, iterate) => [iterate.slice(0, index), iterate.slice(index)];
+
 const AddToCart = ({ price }) => {
-  const splitAt = (index, xs) => [xs.slice(0, index), xs.slice(index)];
   const formattedPrice = parseFloat(splitAt(-2, `${price}`).join('.'));
 
   const [adjustedPrice, setAdjustedPrice] = useState(formattedPrice);
